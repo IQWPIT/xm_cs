@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>业务数据看板</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-decoration"></div>
+    <main class="dashboard">
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">运营总览</p>
+          <h1>实时数据看板</h1>
+          <p id="data-status" class="data-status"></p>
+        </div>
+        <div class="header-meta">
+          <span id="updated-time"></span>
+        </div>
+      </header>
+
+      <section class="kpi-grid" id="kpi-grid"></section>
+
+      <section class="panel-grid">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>近7日订单趋势</h2>
+          </div>
+          <canvas id="trend-chart" width="640" height="280" aria-label="订单趋势图"></canvas>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>渠道转化率</h2>
+          </div>
+          <ul class="channel-list" id="channel-list"></ul>
+        </article>
+
+        <article class="panel panel-wide">
+          <div class="panel-head">
+            <h2>区域销售排行</h2>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>排名</th>
+                <th>区域</th>
+                <th>销售额</th>
+                <th>环比</th>
+              </tr>
+            </thead>
+            <tbody id="region-table"></tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
