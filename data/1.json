@@ -1,0 +1,517 @@
+{
+  "_id": {
+    "$oid": "64c83a96de5339b0dc25efd8"
+  },
+  "BS_incr_ratio_30d": 0,
+  "BS_incr_ratio_7d": 0,
+  "active_price": 103,
+  "attributes": [
+    {
+      "name": "Marca",
+      "id": "BRAND",
+      "v_name": "HillSafe",
+      "v_name_en": "HillSafe"
+    },
+    {
+      "name": "Tipo de cierre",
+      "id": "CLOSURE_TYPE",
+      "v_name": "ZIPPER",
+      "v_name_en": "ZIPPER"
+    },
+    {
+      "name": "Composición",
+      "id": "COMPOSITION",
+      "v_name": "55gms",
+      "v_name_en": "55 grams"
+    },
+    {
+      "name": "Género",
+      "id": "GENDER",
+      "v_name": "Sin género",
+      "v_name_en": "Genderless"
+    },
+    {
+      "name": "Condición del ítem",
+      "id": "ITEM_CONDITION",
+      "v_name": "Nuevo",
+      "v_name_en": "New"
+    },
+    {
+      "name": "Línea",
+      "id": "LINE",
+      "v_name": "DESECHABLE",
+      "v_name_en": "DISPOSABLE"
+    },
+    {
+      "name": "Material principal",
+      "id": "MAIN_MATERIAL",
+      "v_name": "Tela Microporosa Laminada",
+      "v_name_en": "Laminated Microporous Fabric"
+    },
+    {
+      "name": "Modelo",
+      "id": "MODEL",
+      "v_name": "HS1000",
+      "v_name_en": "HS1000"
+    },
+    {
+      "name": "Tipo de manga",
+      "id": "SLEEVE_TYPE",
+      "v_name": "Larga",
+      "v_name_en": "Long"
+    }
+  ],
+  "avg_conversion": 0.11194,
+  "bPrice": "8.8",
+  "base_iQ": 319,
+  "base_sT": 72,
+  "base_tO": 253,
+  "best_seller": 0,
+  "brand": "HillSafe",
+  "buy_box_winner_null": false,
+  "catalog_listing": 0,
+  "categories": {
+    "cat_1": "Ropa, Bolsas y Calzado",
+    "cat_2": "Indumentaria Laboral y Escolar",
+    "cat_3": "Uniformes y Ropa de Trabajo",
+    "cat_4": "Overoles"
+  },
+  "category_id": "MLM437526",
+  "cbt": 0,
+  "condition": 1,
+  "conversion_all_order": 138,
+  "conversion_all_view": 3223,
+  "cp": 0,
+  "datetime": {
+    "$numberLong": "1772391005849"
+  },
+  "discount": 0,
+  "errorSt": 0,
+  "freeShipping": false,
+  "gmv30d": 949,
+  "initial_quantity": 654,
+  "interface_access": false,
+  "item_id": "MLM1926165301",
+  "last_scraped_onsale_date": 20260301,
+  "latest_avg_conversion_date": 20240917,
+  "model": "HS1000",
+  "monthly_conversion": {
+    "202403": 0.10241,
+    "202404": 0.129386,
+    "202405": 0.336283,
+    "202406": 0.141414,
+    "202407": 0.116766,
+    "202408": 0.078431
+  },
+  "monthly_sale_trend": {
+    "2308": 0,
+    "2309": 0,
+    "2310": 13,
+    "2311": 6,
+    "2312": 3,
+    "2401": 1,
+    "2402": 20,
+    "2403": 17,
+    "2404": 59,
+    "2405": 38,
+    "2406": 14,
+    "2407": 39,
+    "2408": 24,
+    "2409": 24,
+    "2410": 69,
+    "2411": 69,
+    "2412": 18,
+    "2501": 3,
+    "2502": 8,
+    "2503": 24,
+    "2504": 10,
+    "2505": 14,
+    "2506": 19,
+    "2507": 8,
+    "2508": 34,
+    "2509": 12,
+    "2510": 15,
+    "2511": 14,
+    "2512": 10,
+    "2601": 20,
+    "2602": 11
+  },
+  "new_rank": 1,
+  "notFound": false,
+  "offer_number": 0,
+  "official_store": 0,
+  "order14d": 11,
+  "order1d": 1,
+  "order30d": 11,
+  "order30d_increase_ratio": -0.45,
+  "order7d": 8,
+  "order7d_increase_ratio": 8,
+  "order90d": 41,
+  "origin_total_order": "+500",
+  "original_price": 0,
+  "outstock": 0,
+  "p_height": 0,
+  "p_length": 0,
+  "p_weight": 0,
+  "p_width": 0,
+  "pg": "avg",
+  "pic_arr": [
+    "841162-MLM89601367722_082025",
+    "663376-MLM70770580286_072023",
+    "602530-MLM71628759312_092023"
+  ],
+  "pic_template": "https://http2.mlstatic.com/D_NQ_NP_{id}-O.webp",
+  "pic_url": "https://http2.mlstatic.com/D_NQ_NP_841162-MLM89601367722_082025-O.webp",
+  "powerSellerStatus": "silver",
+  "price_trend": {
+    "20251231": 89,
+    "20260101": 89,
+    "20260102": 89,
+    "20260103": 89,
+    "20260104": 89,
+    "20260105": 89,
+    "20260106": 89,
+    "20260107": 89,
+    "20260108": 89,
+    "20260109": 89,
+    "20260110": 89,
+    "20260111": 89,
+    "20260112": 89,
+    "20260113": 89,
+    "20260114": 89,
+    "20260115": 89,
+    "20260116": 89,
+    "20260117": 89,
+    "20260118": 89,
+    "20260119": 89,
+    "20260120": 89,
+    "20260121": 89,
+    "20260122": 89,
+    "20260123": 89,
+    "20260124": 89,
+    "20260125": 89,
+    "20260126": 89,
+    "20260127": 89,
+    "20260128": 89,
+    "20260129": 89,
+    "20260130": 89,
+    "20260131": 89,
+    "20260201": 89,
+    "20260202": 89,
+    "20260203": 89,
+    "20260204": 89,
+    "20260205": 89,
+    "20260206": 89,
+    "20260207": 89,
+    "20260208": 89,
+    "20260209": 89,
+    "20260210": 89,
+    "20260211": 89,
+    "20260212": 89,
+    "20260213": 89,
+    "20260214": 89,
+    "20260215": 86.33,
+    "20260216": 86.33,
+    "20260217": 86.33,
+    "20260218": 86.33,
+    "20260219": 86.33,
+    "20260220": 86.33,
+    "20260221": 86.33,
+    "20260222": 86.33,
+    "20260223": 86.33,
+    "20260224": 86.33,
+    "20260225": 86.33
+  },
+  "price_trend_avg": 88.735,
+  "price_trend_max": 103,
+  "price_trend_min": 86.33,
+  "product_id": "",
+  "puton_date": 20230731,
+  "question14d": 0,
+  "question30d": 0,
+  "question7d": 0,
+  "rank": 933,
+  "rank_time": {
+    "$numberLong": "1743373595525"
+  },
+  "rating_avg": 4.7,
+  "reputationLevel": "5_green",
+  "review_num": 17,
+  "saveAttr": 1,
+  "sellerID": "1114054945",
+  "sellerName": "sitresan",
+  "sellerType": "normal",
+  "sku_id": "MLM1926165301",
+  "sold_quantity": 0,
+  "spu_id": "",
+  "spu_title": "Overol Blanco Desechable Tipo Tyvek Capucha Y Cierre",
+  "spu_url": "https://articulo.mercadolibre.com.mx/MLM-1926165301-overol-blanco-desechable-tipo-tyvek-capucha-y-cierre-_JM?matt_tool=17030900#origin=share&sid=share",
+  "stock_num": 57,
+  "stock_type": "nor",
+  "tags": [
+    "good_quality_thumbnail",
+    "immediate_payment",
+    "cart_eligible"
+  ],
+  "test": 1,
+  "total_order": 597,
+  "valid": 0,
+  "variation": {
+    "SIZE": [
+      {
+        "id": "Rw==",
+        "attr": "G",
+        "stock": 10,
+        "o30d": 9,
+        "o90d": 30
+      },
+      {
+        "id": "MlhM",
+        "attr": "2XL",
+        "stock": 1,
+        "o30d": 3,
+        "o90d": 23
+      }
+    ]
+  },
+  "withVariation": false,
+  "st_exception_flag": false,
+  "new_cbt": 5,
+  "avg_conversion2": 0.042817251008377286,
+  "tmp2_order30d": {
+    "dt": {
+      "$date": "2024-12-16T07:06:43.557Z"
+    },
+    "order30d": 15
+  },
+  "tmp1_order30d": {
+    "dt": "2024-12-31 15:22:25",
+    "order30d": 9
+  },
+  "varition_v2": {
+    "color_secondary_color": [
+      {
+        "id": "QmxhbmNv",
+        "attr": "Blanco"
+      }
+    ],
+    "size": [
+      {
+        "id": "Rw==",
+        "attr": "G"
+      },
+      {
+        "id": "WEw=",
+        "attr": "XL"
+      },
+      {
+        "id": "MlhH",
+        "attr": "2XG"
+      }
+    ]
+  },
+  "date_created": "2023-07-31T20:18:09.000Z",
+  "last_updated": "2026-02-24T19:45:55.099Z",
+  "reviews_with_comment": 7,
+  "gmv7d": 690,
+  "order30dt": 20260225,
+  "weekly_conversion_trend": {
+    "202439": 0.011428571428571429,
+    "202440": 0.0380952380952381,
+    "202441": 0.03785488958990536,
+    "202442": 0.0443213296398892,
+    "202443": 0.025604551920341393,
+    "202444": 0.10555555555555556,
+    "202445": 0.40789473684210525,
+    "202446": 0.04065040650406504,
+    "202447": 0.08571428571428572,
+    "202448": 0.056179775280898875,
+    "202449": 0.04201680672268908,
+    "202450": 0.1794871794871795,
+    "202451": 0.09375,
+    "202452": 0.11764705882352941,
+    "202501": 0.029411764705882353,
+    "202502": 0.5,
+    "202503": 0.125,
+    "202504": 0,
+    "202505": 0.08333333333333333,
+    "202506": 0,
+    "202507": 0.024390243902439025,
+    "202508": 0.005681818181818182,
+    "202509": 0.06015037593984962,
+    "202510": 0.16666666666666666,
+    "202511": 0.08928571428571429,
+    "202512": 0.05172413793103448,
+    "202513": 0.08888888888888889,
+    "202514": 0.012987012987012988,
+    "202515": 0.3333333333333333,
+    "202516": 0.06666666666666667,
+    "202517": 0.0125,
+    "202518": 0.04918032786885246,
+    "202519": 0.15625,
+    "202520": 0.045454545454545456,
+    "202521": 0.03333333333333333,
+    "202522": 0.023809523809523808,
+    "202523": 0.07142857142857142,
+    "202524": 0.09375,
+    "202525": 0.125,
+    "202526": 0.045454545454545456,
+    "202527": 0.07894736842105263,
+    "202528": 0,
+    "202529": 0,
+    "202530": 0,
+    "202531": 0.043478260869565216,
+    "202532": 0.05405405405405406,
+    "202533": 0.0625,
+    "202534": 0.07518796992481203,
+    "202535": 0.625,
+    "202536": 0.3333333333333333,
+    "202537": 0.12903225806451613,
+    "202538": 0,
+    "202539": 0.25,
+    "202540": 0.1016949152542373,
+    "202541": 0.36363636363636365,
+    "202542": 0.024691358024691357,
+    "202543": 0.028985507246376812,
+    "202544": 0.1111111111111111,
+    "202545": 0.6,
+    "202546": 0.1,
+    "202547": 0.1,
+    "202548": 0.14285714285714285,
+    "202549": 0.21428571428571427,
+    "202550": 0.15384615384615385,
+    "202551": 0.15384615384615385,
+    "202552": 0.14285714285714285
+  },
+  "listing_type": "gold_pro",
+  "offersInf": [],
+  "sellerCbt": 0,
+  "sellerCbtSellerId": 1114054945,
+  "sellerCbtT": 20260301,
+  "new_sku": 2,
+  "variation_num": 4,
+  "pre_order_sum_20240918": 246,
+  "p_info_2": {
+    "volume": 9322.64453125,
+    "width": 26.030000686645508,
+    "height": 13,
+    "length": 27.549999237060547,
+    "weight": 705.6400146484375
+  },
+  "spu_title_cn": "一次性白色泰维克连体服，带帽子和拉链",
+  "spu_title_en": "Disposable White Tyvek Coverall with Hood and Zipper",
+  "var_combo": [
+    {
+      "attrs": [
+        {
+          "id": "QmxhbmNv",
+          "type": "color_secondary_color",
+          "attr": "Blanco"
+        },
+        {
+          "id": "Rw==",
+          "type": "size",
+          "attr": "G"
+        }
+      ]
+    },
+    {
+      "attrs": [
+        {
+          "id": "QmxhbmNv",
+          "type": "color_secondary_color",
+          "attr": "Blanco"
+        },
+        {
+          "id": "WEw=",
+          "type": "size",
+          "attr": "XL"
+        }
+      ]
+    },
+    {
+      "attrs": [
+        {
+          "id": "QmxhbmNv",
+          "type": "color_secondary_color",
+          "attr": "Blanco"
+        },
+        {
+          "id": "MlhH",
+          "type": "size",
+          "attr": "2XG"
+        }
+      ]
+    }
+  ],
+  "order7d_lanjing": 18,
+  "payment_total_price": "102.99",
+  "hasDescription": "yes",
+  "packageInfo": {
+    "upd": 20251231,
+    "type": "variations"
+  },
+  "cs_v3_last_sync_datetime": "20260225070700",
+  "cs_v3_last_sync_end_date": 20260225,
+  "order60d": 41,
+  "order30d_lanjing": 12,
+  "order90d_lanjing": 27,
+  "total_order_lanjing": 566,
+  "reckon": 3,
+  "dT": 20251201,
+  "variations3": [
+    [
+      {
+        "attr_name": "Color/Talla",
+        "attr_value": "Blanco/2XG",
+        "pictures": [
+          "841162-MLM89601367722_082025"
+        ],
+        "sold_true_ratio": 0.5,
+        "soldQuantity_ratio": 0.5
+      },
+      {
+        "attr_name": "Color/Talla",
+        "attr_value": "Blanco/G",
+        "pictures": [
+          "841162-MLM89601367722_082025"
+        ],
+        "sold_true_ratio": 0.5,
+        "soldQuantity_ratio": 0.5
+      }
+    ],
+    [
+      {
+        "attr_name": "Talla",
+        "attr_value": "2XG",
+        "pictures": [
+          "841162-MLM89601367722_082025"
+        ],
+        "sold_true_ratio": 0.5,
+        "soldQuantity_ratio": 0.5
+      },
+      {
+        "attr_name": "Talla",
+        "attr_value": "G",
+        "pictures": [
+          "841162-MLM89601367722_082025"
+        ],
+        "sold_true_ratio": 0.5,
+        "soldQuantity_ratio": 0.5
+      }
+    ],
+    [
+      {
+        "attr_name": "Color",
+        "attr_value": "Blanco",
+        "pictures": [
+          "841162-MLM89601367722_082025",
+          "841162-MLM89601367722_082025"
+        ],
+        "sold_true_ratio": 1,
+        "soldQuantity_ratio": 1
+      }
+    ]
+  ],
+  "price_trend_upd_date": 20260301
+}
