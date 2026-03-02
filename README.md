@@ -1,11 +1,20 @@
-# xm_cs（Python + MongoDB 数据看板）
+# xm_cs（无 MongoDB 版本数据看板）
 
-这是一个基于 **Flask + MongoDB** 的运营数据看板示例，支持：
+当前版本基于 **Flask + 本地测试数据**，不依赖 MongoDB，可直接跑起来看效果。
 
-- Python 后端渲染页面（`/`）。
-- MongoDB 数据读取与聚合（`/api/dashboard`）。
-- 无真实数据时自动返回测试数据（兜底可视化）。
-- 提供数据写入 API，方便联调与压测。
+## 功能概览
+
+- 页面：`GET /`
+- 看板数据 API：`GET /api/dashboard`
+- 获取原始测试数据：`GET /api/test-data`
+- 注入实时数据（进程内存）：`POST /api/ingest`
+- 重置回测试数据：`POST /api/reset`
+
+> 说明：
+> - 现在还没有数据库，因此默认使用 `data/mock_dashboard.json` 的测试数据。
+> - `POST /api/ingest` 写入的是**内存数据**，仅当前 Python 进程有效，重启后失效。
+
+---
 
 ## 1. 目录结构
 
@@ -13,6 +22,8 @@
 .
 ├── app.py
 ├── requirements.txt
+├── data/
+│   └── mock_dashboard.json
 ├── templates/
 │   └── index.html
 ├── static/
@@ -21,7 +32,7 @@
 └── README.md
 ```
 
-## 2. 环境准备
+## 2. 启动方式
 
 ### 2.1 安装依赖
 
@@ -31,27 +42,31 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2.2 准备 MongoDB
-
-本地默认连接：`mongodb://127.0.0.1:27017`。
-
-你也可以通过环境变量覆盖：
-
-```bash
-export MONGODB_URI="mongodb://127.0.0.1:27017"
-export MONGODB_DB="dashboard"
-```
-
-## 3. 启动项目
+### 2.2 启动服务
 
 ```bash
 python3 app.py
 ```
 
-默认监听 `0.0.0.0:8080`，浏览器打开：
+默认端口 `8080`，访问：
 
 - 页面：`http://localhost:8080/`
 - 看板 API：`http://localhost:8080/api/dashboard`
+
+---
+
+## 3. 测试数据说明
+
+测试数据文件：`data/mock_dashboard.json`，包含：
+
+- `kpis`（4 个核心指标）
+- `dailyOrders`（近 7 天订单）
+- `channelConversion`（渠道转化率）
+- `regionSales`（区域销售排行）
+
+你可以直接修改此文件来调整页面展示内容。
+
+---
 
 ## 4. API 说明
 
@@ -59,76 +74,58 @@ python3 app.py
 
 `GET /api/dashboard`
 
-- 优先从 MongoDB 读取真实数据。
-- 如果数据不足（如近 7 天订单不足、渠道/区域为空），自动回退为测试数据。
+- 若未注入实时数据：返回测试数据（`isMock: true`）
+- 若已调用 `/api/ingest`：返回内存实时数据（`isMock: false`）
 
-返回示例：
+### 4.2 获取测试数据原文
 
-```json
-{
-  "isMock": false,
-  "updatedAt": "2026-03-02 10:00:00",
-  "kpis": [
-    {"label": "本周订单", "value": "2,103", "delta": 0.052}
-  ],
-  "dailyOrders": [{"day": "3/1", "value": 301}],
-  "channelConversion": [{"name": "官网", "value": 0.182}],
-  "regionSales": [{"name": "华东", "amount": 820000, "ratio": 0.06}]
-}
-```
+`GET /api/test-data`
 
-### 4.2 一键写入测试数据
+用于前端联调、对照结构。
 
-`POST /api/seed-test-data`
-
-用途：快速填充 MongoDB，验证 UI 与接口。
-
-```bash
-curl -X POST http://localhost:8080/api/seed-test-data
-```
-
-### 4.3 写入业务数据（联调用）
+### 4.3 注入实时数据（内存）
 
 `POST /api/ingest`
 
-请求体需包含：`dailyOrders`、`channelConversion`、`regionSales`。
+请求示例：
 
 ```bash
 curl -X POST http://localhost:8080/api/ingest \
   -H 'Content-Type: application/json' \
   -d '{
-    "dailyOrders": [{"day":"3/1","value":320}],
-    "channelConversion": [{"name":"官网","value":0.21}],
-    "regionSales": [{"name":"华东","amount":900000,"ratio":0.08}]
+    "kpis": [
+      {"label":"本周订单","value":"3,120","delta":0.10},
+      {"label":"销售额","value":"¥4,510,000","delta":0.09},
+      {"label":"平均客单价","value":"¥1,445","delta":-0.02},
+      {"label":"转化率","value":"19.1%","delta":0.03}
+    ],
+    "dailyOrders": [
+      {"day":"3/1","value":410},
+      {"day":"3/2","value":438}
+    ],
+    "channelConversion": [
+      {"name":"官网","value":0.23},
+      {"name":"小程序","value":0.19}
+    ],
+    "regionSales": [
+      {"name":"华东","amount":980000,"ratio":0.08},
+      {"name":"华南","amount":860000,"ratio":0.03}
+    ]
   }'
 ```
 
-## 5. 性能设计说明（已落地）
+### 4.4 重置为测试数据
 
-- `MongoClient` 使用连接池参数（`maxPoolSize`、`minPoolSize`），减少高并发下频繁建连开销。
-- 为高频查询字段创建索引：
-  - `metrics_daily.day`
-  - `channels.updatedAt`
-  - `regions.amount`
-- 看板查询只取必要字段（投影 `_id: 0`），降低网络与序列化成本。
-- 趋势、排名等计算在后端一次成型，前端仅渲染，减少浏览器负担。
+`POST /api/reset`
 
-## 6. 前端说明
+```bash
+curl -X POST http://localhost:8080/api/reset
+```
 
-前端页面使用现代深色风格（渐变 + 玻璃拟态），并通过 `/api/dashboard` 拉取数据：
+---
 
-- 实时显示“当前展示 MongoDB 线上数据”或“已自动填充测试数据”。
-- 包含 KPI、趋势图、渠道转化率、区域销售排行。
-- 移动端自动响应式布局。
+## 5. 性能与可维护性（当前版本）
 
-## 7. 常见问题
-
-1. **页面显示“加载失败”**
-   - 检查后端是否启动。
-   - 检查 MongoDB 连接是否可达。
-
-2. **一直显示测试数据**
-   - 说明真实数据不足；可先调用 `/api/seed-test-data`。
-
-3. **如何改端口**
-   - 启动前设置：`export PORT=9000`
+- 测试数据读取使用 `lru_cache` 缓存，避免重复磁盘 IO。
+- 前端只请求一个主接口 `/api/dashboard`，数据结构固定，渲染开销低。
+- 代码已预留 API 结构，后续接入 MySQL / MongoDB / ES 时前端可基本无缝复用。

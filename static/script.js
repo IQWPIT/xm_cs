@@ -127,7 +127,7 @@ async function initDashboard() {
     document.getElementById("updated-time").textContent = `更新时间：${data.updatedAt || new Date().toLocaleString("zh-CN")}`;
     document.getElementById("data-status").textContent = data.isMock
       ? "当前无线上数据，已自动填充测试数据进行展示。"
-      : "当前展示 MongoDB 线上数据。";
+      : "当前展示已注入的实时数据（内存模式）。";
 
     renderKpis(data.kpis);
     drawTrendChart(data.dailyOrders);
