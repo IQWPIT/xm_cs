@@ -1,0 +1,3 @@
+2026-01-26 14:54:59.916 | INFO     | __main__:<module>:210 - 任务开始 | site=ml_mx | month=202512
+2026-01-26 14:55:04.383 | INFO     | __main__:process_bulk_write:188 - 最后批次 Bulk write 提交 3 条
+2026-01-26 14:55:04.383 | INFO     | __main__:<module>:221 - 任务完成 | 成功=3 | 失败=0
