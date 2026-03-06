@@ -1,0 +1,13 @@
+python yingshi_sku_1.py --site ml_mx --time 202512
+python ml_cl_monthly_sku.py --site ml_mx --time 202512
+
+python yingshi_sku_1.py --site ml_br --time 202512
+python ml_cl_monthly_sku.py --site ml_br --time 202512
+
+
+python yingshi_sku_1.py --site ml_cl --time 202512
+python ml_cl_monthly_sku.py --site ml_cl --time 202512
+
+python yingshi_sku_1.py --site ml_co --time 202512
+python ml_cl_monthly_sku.py --site ml_co --time 202512
+

@@ -1,0 +1,34 @@
+{
+  "isMock": true,
+  "updatedAt": "2026-03-02 10:30:00",
+  "kpis": [
+    {"label": "本周订单", "value": "2,436", "delta": 0.127},
+    {"label": "销售额", "value": "¥3,892,600", "delta": 0.084},
+    {"label": "平均客单价", "value": "¥1,598", "delta": -0.013},
+    {"label": "转化率", "value": "18.6%", "delta": 0.029}
+  ],
+  "dailyOrders": [
+    {"day": "2/24", "value": 286},
+    {"day": "2/25", "value": 302},
+    {"day": "2/26", "value": 318},
+    {"day": "2/27", "value": 351},
+    {"day": "2/28", "value": 337},
+    {"day": "3/1", "value": 401},
+    {"day": "3/2", "value": 441}
+  ],
+  "channelConversion": [
+    {"name": "官网", "value": 0.226},
+    {"name": "小程序", "value": 0.194},
+    {"name": "电商平台", "value": 0.173},
+    {"name": "线下门店", "value": 0.145},
+    {"name": "代理商", "value": 0.121}
+  ],
+  "regionSales": [
+    {"name": "华东", "amount": 1023000, "ratio": 0.083},
+    {"name": "华南", "amount": 887000, "ratio": 0.052},
+    {"name": "华北", "amount": 706000, "ratio": -0.011},
+    {"name": "华中", "amount": 621000, "ratio": 0.026},
+    {"name": "西南", "amount": 458000, "ratio": -0.034},
+    {"name": "西北", "amount": 197600, "ratio": 0.012}
+  ]
+}
