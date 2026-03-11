@@ -8,18 +8,18 @@ os.environ["NET3"] = "NXQ"
 
 from dm.connector.mongo.manager3 import get_collection
 
-DST_MONTH = 202601
+DST_MONTH = 202507
 
 cat_ids = {
     'MLB7073': "ml_br",
-    'MLB455251': "ml_br",
-    'MLM437575': "ml_mx",
-    'MLM455251': "ml_mx",
-    'MLM420128': "ml_mx",
-    'MLC5713': "ml_cl",
-    'MCO5844': "ml_co",
-    "MLA5959": "ml_ar",
-    "MLA417835": "ml_ar",
+    # 'MLB455251': "ml_br",
+    # 'MLM437575': "ml_mx",
+    # 'MLM455251': "ml_mx",
+    # 'MLM420128': "ml_mx",
+    # 'MLC5713': "ml_cl",
+    # 'MCO5844': "ml_co",
+    # "MLA5959": "ml_ar",
+    # "MLA417835": "ml_ar",
 }
 cat_id_s = []
 c_s = []
@@ -30,7 +30,10 @@ for cat_id, site in cat_ids.items():
     col = get_collection("yingshi", "yingshi", f"{site}_monthly_sku")
 
     cursor = col.find(
-        {"month": DST_MONTH},
+        {
+            "month": DST_MONTH,
+
+        },
         {"category_id": 1, "categories": 1}
     )
     for doc in cursor:

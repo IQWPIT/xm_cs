@@ -13,7 +13,7 @@ cat = get_collection("main_ml_mx", "ml_mx", "cat")
 
 time_list = [
     202411, 202412, 202501, 202502, 202503, 202504, 202505, 202506,
-    202507, 202508, 202509, 202510, 202511, 202512
+    202507, 202508, 202509, 202510, 202511, 202512,202601
 ]
 
 ops = []
@@ -25,12 +25,15 @@ for i in tqdm(cursor, desc="Processing cat"):
     cat_id = i["id"]
     print(cat_id)
     path = i.get("leaf")
-
+    paths = i.get("path")
     for j in time_list:
         ops.append(
             UpdateOne(
                 {"cat_id": cat_id, "time": j},
-                {"$set": {"leaf": path}},
+                {"$set": {
+                    "leaf": path,
+                    "path": paths
+                }},
                 upsert=True
             )
         )

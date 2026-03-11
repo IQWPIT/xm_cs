@@ -12,10 +12,10 @@ from dm.connector.mongo.manager3 import get_collection
 # =========================
 # 配置
 # =========================
-site = "ml_co"
+site = "ml_br"
 cat_id = ["MLB7073"]
-MONTHS = [202510, 202511, 202512]  # 按顺序排列
-TOP_N = 20  # 输出前 N 个品牌
+MONTHS = [202507, 202508, 202509, 202510, 202511, 202512]  # 按顺序排列
+TOP_N = 30  # 输出前 N 个品牌
 CSV_FILE = "brand_monthlyorder.csv"
 JSON_FILE = "brand_monthlyorder.json"
 
@@ -23,7 +23,7 @@ JSON_FILE = "brand_monthlyorder.json"
 # 集合
 # =========================
 c_monthly_sku = get_collection("yingshi", "yingshi", f"{site}_monthly_sku")
-
+# c_monthly_sku = get_collection("yingshi", "yingshi", f"ml_br_monthly_sku_backup_20260305")
 # =========================
 # brand → month → order
 # =========================
@@ -32,15 +32,22 @@ brand_month_map = defaultdict(lambda: defaultdict(int))
 # =========================
 # 查询月表
 # =========================
+import re
+brand = ["EZVIZ", "Hikvision", "Intelbras", "TP-Link"]
+
+brand_regex = [re.compile(f"^{b}$", re.I) for b in brand]
+
 cursor = c_monthly_sku.find(
     {
         "month": {"$in": MONTHS},
-        # "category_id": {"$in": cat_id}
+        "category_id": {"$in": cat_id},
+        "brand": {"$in": brand_regex},
     },
     {
         "month": 1,
         "brand": 1,
-        "monthlyorder": 1
+        "monthlyorder": 1,
+        "monthlygmv":1,
     }
 )
 
@@ -50,10 +57,11 @@ cursor = c_monthly_sku.find(
 for d in cursor:
     brand = d.get("brand")
     month = d.get("month")
-    order = d.get("monthlyorder", 0)
+    # order = d.get("monthlyorder", 0)
+    order = d.get("monthlygmv",0)
     if not brand or not month:
         continue
-    brand_month_map[brand][month] += order
+    brand_month_map[brand][month] = round(brand_month_map[brand][month] + order, 2)
 
 # =========================
 # 排序（按最新月份）
