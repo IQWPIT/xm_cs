@@ -129,3 +129,25 @@ curl -X POST http://localhost:8080/api/reset
 - 测试数据读取使用 `lru_cache` 缓存，避免重复磁盘 IO。
 - 前端只请求一个主接口 `/api/dashboard`，数据结构固定，渲染开销低。
 - 代码已预留 API 结构，后续接入 MySQL / MongoDB / ES 时前端可基本无缝复用。
+
+---
+
+## 6. 基于机器学习的销量估计（新增）
+
+仓库新增了 `sales_ml_estimator.py`，用于把类似你提供的抓取数据转成监督学习样本，并训练随机森林回归模型来估计下一时间步的 `sales_30d_est`。
+
+> 关键点：
+> - **单条商品记录无法训练可靠模型**；至少需要多个 ASIN + 多天快照。
+> - 推荐先积累 500+ 时间步样本，再看 MAE / RMSE。
+
+运行示意：
+
+```python
+from sales_ml_estimator import train_sales_estimator
+
+records = [...]  # 多条商品历史记录
+result = train_sales_estimator(records)
+print(result.mae, result.rmse, result.n_samples)
+```
+
+如需进一步提升精度，可升级为 LightGBM/XGBoost 或时序模型（LSTM/Transformer）。
