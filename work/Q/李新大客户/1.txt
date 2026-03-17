@@ -1,0 +1,29 @@
+MLM31544 ✅
+MLM31544 ❌ 'sale_amount'
+MLM31544 ✅
+MLM31544 ✅
+MLM31544 ✅
+MLM31544 ✅
+MLM31544 ✅
+MLM31544 ❌ invalid literal for int() with base 10: "{'2510': 92}{'2510': 8}{'2510': 7}{'2510': 65}{'2510': 62}{'2510': 5}{'2510': 5}{'2510': 5}{'2510': 4}{'2510': 4}"
+MLM31544 ❌ invalid literal for int() with base 10: "{'2510': 92}{'2510': 8}{'2510': 7}{'2510': 65}{'2510': 62}{'2510': 5}{'2510': 5}{'2510': 5}{'2510': 4}{'2510': 4}"
+MLM31544 ❌ unsupported operand type(s) for +: 'int' and 'str'
+MLM31544 ✅
+MLM455286 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM455286.csv'
+MLM455283 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM455283.csv'
+MLM455281 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM455281.csv'
+MLM433681 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM433681.csv'
+MLM322102 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM322102.csv'
+MLM439459 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM439459.csv'
+MLM455286 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM455286.csv'
+MLM455283 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM455283.csv'
+MLM455281 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM455281.csv'
+MLM433681 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM433681.csv'
+MLM439459 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM439459.csv'
+MLM322102 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM322102.csv'
+MLM455286 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM455286.csv'
+MLM455283 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM455283.csv'
+MLM455281 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM455281.csv'
+MLM433681 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM433681.csv'
+MLM439459 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM439459.csv'
+MLM322102 出错: [Errno 2] No such file or directory: 'D:\\data\\看板\\processed_j_cbt_price\\MLM322102.csv'
